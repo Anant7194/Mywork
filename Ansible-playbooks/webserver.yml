@@ -1,0 +1,24 @@
+---                                                                                                                                              
+- name: This sets up an httpd webserver on both hosts                         
+  hosts: group1                                                               
+  tasks:
+  - name: Install httpd packages......                                
+    yum:
+      name: httpd 
+      state: latest 
+  - name: ensure httpd is running  
+    service: 
+      name: httpd
+      state: started      
+      enabled: true   
+  - name: Copying the file  
+    copy:     
+      content: "Hello from Anant"     
+      dest: /var/www/html/index.html     
+      mode: 0644      
+      owner: aws   
+      group: aws     
+  
+  
+  // This will write the content in the machines included in the group 1 that is present in inventory file
+  

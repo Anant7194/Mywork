@@ -1,0 +1,22 @@
+---            
+- name: Archiving the file /var/log........ 
+  hosts: hdfcservers 
+  vars:
+    dest: /home/hdfcservers{{ ansible_date_time.day }}{{ ansible_date_time.month }}.tgz
+  tasks:                         
+  - name: Taking a backup using archive module.............    
+    archive:                               
+      path: /var/log
+      dest: "{{ dest }}"            
+    delegate_to: localhost  
+    
+- name: Archiving the file /var/log........
+  hosts: boiservers 
+  vars:
+    dest: /home/boiservers{{ ansible_date_time.day }}{{ ansible_date_time.month }}.tgz
+  tasks:  
+  - name: Taking a backup using archive module.............
+    archive:
+      path: /var/log                            
+      dest: "{{ dest }}"  
+    delegate_to: localhost  

@@ -1,0 +1,37 @@
+---            
+- name: Playbook to install cloud monitoring agent  
+  hosts: group1   
+  tasks:
+    - command: "curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh"  
+    - command: "curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh"   
+    - name: Copying files                 
+      copy:                           
+        src: add-monitoring-agent-repo.sh        
+        dest: /tmp/ 
+    - name: Copying files 
+      copy:             
+        src: add-logging-agent-repo.sh   
+        dest: /tmp/                      
+    
+    - command: "sudo bash /tmp/add-monitoring-agent-repo.sh"  
+    - command: "sudo bash /tmp/add-logging-agent-repo.sh" 
+    - name: Installing the agents                          
+      yum:                                          
+        name: google-fluentd                        
+        state: present                          
+    - name: Installing the agents  
+      yum:  
+        name: google-fluentd-catch-all-config-structured           
+        state: present      
+    - name: Installing the agents 
+      yum: 
+        name: stackdriver-agent   
+        state: present
+    - name: Starting the services 
+      service:  
+        name: stackdriver-agent
+        state: started 
+    - name: Restarting the services
+      service:   
+        name: google-fluentd
+        state: restarted  
