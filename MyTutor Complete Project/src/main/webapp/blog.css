@@ -1,0 +1,335 @@
+* {
+	box-sizing: border-box;
+	margin: 0%;
+	padding: 0px;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: linear-gradient(to right,cyan , white,skyblue);
+	font-family: 'Open Sans', sans-serif;
+}
+header {
+	height: 90vh;
+}
+
+.black {
+	box-shadow: 0 2px 10px black;
+}
+nav {
+	padding-top: 12px;
+	padding-bottom: 0px;
+	top: -1%;
+	position: fixed;
+	display: flex;
+	width: 100%;
+	height: 15%;
+	z-index: 1000;
+	background: white;
+	justify-content: space-around;
+	transition: 1.5s;
+	align-items: center;
+}
+.logo{
+
+	margin-left: -89%;
+    position: absolute;
+    margin-top: -1%;
+
+}
+.logo img{
+	width: 166px;
+	/*margin-top: 0%;
+	margin-bottom: 0%;	
+	margin-left: -65%;
+*/}
+.home{
+    position: absolute;
+    margin-right: 10%;
+}
+
+.para{
+	margin-top: -1%;
+    position: absolute;
+    margin-right: -34%;
+	color: orangered;
+	font-size: large;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: 500;
+}
+
+.profile{
+	margin-right: -55%;
+    margin-top: -1%;
+    position: absolute;
+}
+
+.get-start {
+	margin-left: 45px;
+	padding: 5px 40px;
+	border: 2px solid orangered;
+	border-radius: 20px;
+	text-decoration: none;
+	width: 102%;
+	transition: .5s;
+	background-color: orangered;
+	color: white;
+}
+
+.logout{
+	margin-right: -82%;
+    margin-top: -1%;
+    position: absolute;
+}
+.get-started {
+	margin-left: 45px;
+	padding: 5px 30px;
+	border: 2px solid orangered;
+	border-radius: 20px;
+	text-decoration: none;
+    margin-right: 4%;
+	width: 75%;
+	transition: .5s;
+	background-color: orangered;
+	color: white;
+}
+.get-started:hover {
+	color: orangered;
+	background: white;
+}
+
+
+a, button {
+	float: left;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	color: #2E3D49;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+.mar{
+margin-top: 45px;
+}
+.heady {
+	text-align: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 6px;
+	margin-top: 1%;
+	
+}
+
+/*for blogs pages*/
+
+/*COURSES AVAILABLE*/
+.ccard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.ccardbox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.dcard {
+	margin: 10px;
+	width: 300px;
+	height: 200px;
+	background: linear-gradient(to right, cyan,green);
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.dcard .fpart {
+	width: inherit;
+	height: 150px;
+	color: #000;
+	text-align: left;
+	overflow: hidden;
+}
+.dcard .fpart img {
+	width: 100%;
+	height: 100%;
+}
+
+.dcard .spart {
+	padding: 10px;
+	padding-right: 0px;
+	color: #fff;
+	text-align: left;
+	cursor: pointer;
+}
+.dcard .spart img {
+	width: 20px;
+	margin-left: 170px;
+	cursor: pointer;
+	/* transform: rotate(180deg); */
+}
+
+
+
+/*Small Titles for  Topics*/
+.title2 {
+	position: relative;
+	padding-top: 150px;
+	margin-left: 200px;
+}
+.title2 span{
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	color: orangered;
+    margin-left: 26%;
+}
+.title2 .shortdesc2 {
+	padding: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: orangered;
+	margin-bottom: 10px;
+	margin-left:25.5%;
+}
+
+/*Blogs Section*/
+.ccardbox2 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.dcard2 {
+	margin: 20px;
+	width: 300px;
+	height: 160px;
+	background: linear-gradient(to right, cyan , green);
+	border-radius:5px;
+}
+ 
+.dcard2 .fpart2 { 
+	width: inherit;
+	height: 180px;
+	background: #000;
+	color: #000;
+	text-align: left;
+	border-top-right-radius: 100px;
+	transform: translateY(-18px);
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	overflow:hidden;
+	
+}
+.dcard2 .tag {
+	position:relative;
+	margin-left: 270px;
+	top: 10px;
+	color: #fff; 
+}
+.dcard2 .fpart2 img {
+	width: 100%;
+	height: 100%;
+}
+.inbt {
+	padding: 20px;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	color: orangered;
+	margin-top:-500px;
+	margin-left: 22%;
+	margin-bottom:40px;
+}
+/*||||||||||||||||||||||||  RESPONSIVE  ||||||||||||||||||||||||||||||||||||||*/
+@media only screen and (max-width:370px) {
+	body {
+		background: white;
+
+	}
+	.logo img {
+		width: 105px;
+	}
+	.logo {
+		margin-left: -73%;
+		margin-top: -3%;
+	}
+	.home {
+		margin-right: 35%;
+	}
+	nav{
+		height: 13%;
+	}
+	.home img {
+		width: 46px;
+		}
+	.get-start{
+		padding: 1px 8px;
+		width: 70%;
+		font-size: xx-small;
+	}
+	
+	.get-started{
+		padding: 1px 1px;
+		width: 62%;
+		font-size: xx-small;
+	}
+	.profile{
+		margin-right: -34%;
+	}
+	.logout{
+		margin-right: -68%;
+	}
+	.para{
+		margin-right: -6%;
+		font-size: xx-small;
+	}
+	header{
+		width: 110%;
+	}
+	.mar {
+		margin-top: 35px;
+	}
+	.heady{
+		font-size: small;
+	}
+	.inbt {
+		width: 113%;
+		padding: 24px;
+		font-size: 13px;
+		margin-left: -2%;
+	}
+	.ccardbox {
+		margin-left: 8%;
+		margin-top: -11%;
+	}
+	.title2 .shortdesc2 {
+		font-size: 11px;
+		margin-left: 9.5%;
+	
+	}
+	.title2 span {
+		font-size: 13px;
+		margin-left: 26%;
+	}
+	.title2 {
+	margin-left: -5px;
+	}
+	.ccardbox2 {
+		margin-left: 8%;
+	}
+	.dcard {
+		margin: 16px;
+		width: 270px;
+		height: 190px;
+	}
+	.dcard2 {
+		margin: 16px;
+		width: 270px;
+		height: 190px;
+	}
+}

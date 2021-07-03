@@ -1,0 +1,151 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+    background: black;
+}
+.hello{
+    width: 60%;
+    margin-top: 15%;
+    margin-left: 36%;
+    height: 30%;
+    background-color: black;
+    align-items: center;
+    position: absolute;
+}
+.heading{
+    margin-top: 8%;
+    color: white;
+    margin-left: -15%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 400%;
+    font-weight: 500;
+    font-style: italic;
+}
+.bouncy{
+    animation: bouncy 3s infinite linear;
+    position: relative;
+    }
+
+    a.button1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+        border:0.1em solid white;
+        
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+       font-weight:300;
+        color: white;
+        text-align:center;
+        transition: all 0.2s;
+        border-radius: 30px;
+        margin-left: 12%;
+    }
+        a.button1:hover{
+        color:#000000;
+        background-color:#FFFFFF;
+        }
+        @media all and (max-width:30em){
+         a.button1{
+        display:block;
+        margin:0.4em auto;
+        }
+        }
+section{
+    height: 100vh;
+}
+span{
+position: absolute;
+pointer-events: none;
+background: black;
+animation: animate 10s linear infinite;
+}
+
+.main{
+    height: auto;
+
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(0) translateY(0) rotate(15deg);
+        opacity: 1;
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    90%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    70%
+    {
+        opacity: 0.3;
+    }
+    100%
+    {
+        transform: scale(1) translateY(-500%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+    @keyframes bouncy 
+    {
+    0%
+    {
+        top:0em
+    }
+    40%
+    {
+        top:0em
+    }
+    43%
+    {
+        top:-0.9em
+    }
+    46%{
+        top:0em
+    }
+    48%
+    {
+        top:-0.4em
+    }
+    50%
+    {
+        top:0em
+    }
+    100%
+    {
+        top:0em;
+    }
+
+    }
+	
+	
+@media screen and (max-width: 360px) {
+	
+	.hello{
+		margin-left: 162%;
+		margin-top: 71%;
+	}
+}
+
+@media screen and (max-width:1030px)  {
+	
+	.hello{
+		margin-left: 170%;
+		margin-top: 71%;
+	}
+}
